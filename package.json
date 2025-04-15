@@ -1,0 +1,25 @@
+{
+  "name": "clean_base",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "pnz",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "gulp": "^5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^6.0.1",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.86.0"
+  }
+}
