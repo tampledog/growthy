@@ -1,0 +1,1464 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" sizes="32x32" href="//favicon.svg"/>
+  <link rel="icon" sizes="192x192" href="//favicon.svg"/>
+  <link rel="apple-touch-icon" href="//favicon.svg"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css">
+  <link rel="stylesheet" crossorigin href="./css/old.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Growthy</title>
+  <style>
+      body {
+          overflow: hidden;
+      }
+
+      body.loaded {
+          overflow: auto;
+      }
+
+      body::-webkit-scrollbar {
+          width: 7px;
+          height: 7px;
+      }
+
+      body::-webkit-scrollbar-thumb {
+          background-color: #000;
+          border-radius: 15px;
+      }
+
+      body::-webkit-scrollbar-track {
+          background-color: #fff;
+      }
+
+      .preloader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+          min-width: 360px;
+          width: 100vw;
+          height: 100vh;
+          transition: transform .4s;
+          background-color: #F3F3F4;
+          box-shadow: 0 0 5px #00000080;
+          z-index: 100;
+      }
+
+      .loaded .preloader {
+          transform: translateY(-120%);
+      }
+
+      .preloader__inner {
+          display: flex;
+          align-items: center;
+          margin: auto;
+      }
+
+      .preloader__logo {
+          width: 240px;
+          height: 37px;
+          color: #000;
+      }
+
+      .preloader__spinner {
+          margin-left: 30px;
+          color: #2174f5;
+      }
+  </style>
+</head>
+<body class="cases-page">
+<header class="header">
+  <div class="page__container">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="/" class="header__logo-link">
+          <svg>
+            <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-logo"></use>
+          </svg>
+        </a>
+      </div>
+
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <div class="header__menu-link">
+              <span>Послуги</span>
+              <svg>
+                <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow"></use>
+              </svg>
+            </div>
+
+            <div class="header__subnav">
+              <ul class="header__submenu">
+                <li class="header__submenu-item">
+                  <a href="targeting/index.html" class="header__submenu-link">
+                    <span>Таргетингова реклама</span>
+                    <svg>
+                      <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header__submenu-item">
+                  <a href="#" class="header__submenu-link">
+                    <span>Контекстна та медійна реклама</span>
+                    <svg>
+                      <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header__submenu-item">
+                  <a href="#" class="header__submenu-link">
+                    <span>SEO-просування сайтів</span>
+                    <svg>
+                      <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header__submenu-item">
+                  <a href="#" class="header__submenu-link">
+                    <span>SMM просування</span>
+                    <svg>
+                      <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header__submenu-item">
+                  <a href="#" class="header__submenu-link">
+                    <span>Аудит</span>
+                    <svg>
+                      <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header__submenu-item">
+                  <a href="#" class="header__submenu-link">
+                    <span>Розробка стратегій маркетингу та бренду</span>
+                    <svg>
+                      <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header__submenu-item">
+                  <a href="#" class="header__submenu-link">
+                    <span>Просування мобільних застосунків</span>
+                    <svg>
+                      <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header__submenu-item">
+                  <a href="#" class="header__submenu-link">
+                    <span>Розробка</span>
+                    <svg>
+                      <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="header__submenu-item">
+                  <a href="#" class="header__submenu-link">
+                    <span>Digital аналітика</span>
+                    <svg>
+                      <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="header__menu-item">
+            <a href="#about" class="header__menu-link">Про нас</a>
+          </li>
+
+          <li class="header__menu-item">
+            <a href="#cause" class="header__menu-link">Кейси</a>
+          </li>
+
+          <li class="header__menu-item">
+            <a href="#reviews" class="header__menu-link">Клієнти та відгуки</a>
+          </li>
+
+          <li class="header__menu-item">
+            <a href="#career" class="header__menu-link">Кар'єра</a>
+          </li>
+
+          <li class="header__menu-item">
+            <a href="#blog" class="header__menu-link">Блог</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#" id="toggle" data-popup="#popup" class="page__button page__button_blue header__button">Зв'язатися з
+          нами</a>
+
+        <button class="header__humburger" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar" aria-controls="sidebar">
+          <svg>
+            <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-humburger"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__logo">
+      <svg>
+        <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-logo"></use>
+      </svg>
+    </div>
+
+    <div class="preloader__spinner">
+      <div class="spinner-border" role="status"></div>
+    </div>
+  </div>
+</div>
+
+
+<main>
+  <section class="breadcrumbs">
+    <div class="page__container">
+      <nav class="breadcrumbs__nav" aria-label="breadcrumb">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item breadcrumbs__item_home">
+            <a href="/" class="breadcrumbs__link">
+              <svg>
+                <use href="images/assets/spritemap.5e2bffb2.svg#sprite-breadcrumbs_home">
+                </use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item breadcrumbs__item_separator">
+            <svg>
+              <use href="images/assets/spritemap.5e2bffb2.svg#sprite-breadcrumbs_arrow">
+              </use>
+            </svg>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <p>Послуги</p>
+          </li>
+
+          <li class="breadcrumbs__item breadcrumbs__item_separator">
+            <svg>
+              <use href="images/assets/spritemap.5e2bffb2.svg#sprite-breadcrumbs_arrow">
+              </use>
+            </svg>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <p>Таргетована реклама</p>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <div class="cases-page-top">
+    <div class="page__container">
+      <h1>Наші кейси</h1>
+      <p class="cases-page-top__subtitle">У цьому розділі ми ділимося реальними прикладами успішних проєктів.
+        Дізнайтеся, як наші рішення допомогли клієнтам досягти нових результатів.</p>
+      <ul class="select-list">
+        <li><a href="#">Всі</a></li>
+        <li><a href="#">РРС</a></li>
+        <li><a href="#">Таргет</a></li>
+        <li><a href="#">SMM</a></li>
+        <li><a href="#">Influence</a></li>
+        <li><a href="#">Tik-Tok</a></li>
+        <li><a href="#">Digital marketing</a></li>
+        <li><a href="#">Web development</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cases-page-main">
+    <div class="page__container">
+      <div class="cases-page-main__items">
+        <div class="caseCard">
+          <div class="caseCard__info">
+            <div class="caseCard__title">
+              <a href="#">Hroom</a>
+            </div>
+
+            <div class="caseCard__desc">
+              <p>Hroom - бренд з виробництва снеків. Ми отримали задачу
+                створити інтерактивний лендінг для підвищення залученості
+                користувачів та впізнаваності бренду</p>
+            </div>
+
+            <div class="caseCard__params">
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CPV:</p>
+                <p>$102.4</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Гео:</p>
+                <p>Польща</p>
+              </div>
+
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CTR:</p>
+                <p>15 міс.</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Нових підписників:</p>
+                <p>Таргетована реклама</p>
+              </div>
+            </div>
+
+            <div class="caseCard__tags">
+              <a href="#">MetaAds</a>
+              <a href="#">Promo</a>
+              <a href="#">GoogleAds</a>
+              <a href="#">App</a>
+            </div>
+          </div>
+
+          <div class="caseCard__img">
+            <img src="images/case.jpg" alt="case">
+          </div>
+
+          <a href="#case" class="caseCard__link" target="_blank">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M0.456337 14.0411L14.312 3.28185M1.88574 1.07959L14.7877 2.92519L12.9421 15.8272"
+                        stroke="#F9F9F9" stroke-width="1.5"/>
+                </svg>
+              </span>
+
+          </a>
+        </div>
+        <div class="caseCard">
+          <div class="caseCard__info">
+            <div class="caseCard__title">
+              <a href="#">Hroom</a>
+            </div>
+
+            <div class="caseCard__desc">
+              <p>Hroom - бренд з виробництва снеків. Ми отримали задачу
+                створити інтерактивний лендінг для підвищення залученості
+                користувачів та впізнаваності бренду</p>
+            </div>
+
+            <div class="caseCard__params">
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CPV:</p>
+                <p>$102.4</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Гео:</p>
+                <p>Польща</p>
+              </div>
+
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CTR:</p>
+                <p>15 міс.</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Нових підписників:</p>
+                <p>Таргетована реклама</p>
+              </div>
+            </div>
+
+            <div class="caseCard__tags">
+              <a href="#">MetaAds</a>
+              <a href="#">Promo</a>
+              <a href="#">GoogleAds</a>
+              <a href="#">App</a>
+            </div>
+          </div>
+
+          <div class="caseCard__img">
+            <img src="images/case.jpg" alt="case">
+          </div>
+
+          <a href="#case" class="caseCard__link" target="_blank">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M0.456337 14.0411L14.312 3.28185M1.88574 1.07959L14.7877 2.92519L12.9421 15.8272"
+                        stroke="#F9F9F9" stroke-width="1.5"/>
+                </svg>
+              </span>
+
+          </a>
+        </div>
+        <div class="caseCard">
+          <div class="caseCard__info">
+            <div class="caseCard__title">
+              <a href="#">Hroom</a>
+            </div>
+
+            <div class="caseCard__desc">
+              <p>Hroom - бренд з виробництва снеків. Ми отримали задачу
+                створити інтерактивний лендінг для підвищення залученості
+                користувачів та впізнаваності бренду</p>
+            </div>
+
+            <div class="caseCard__params">
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CPV:</p>
+                <p>$102.4</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Гео:</p>
+                <p>Польща</p>
+              </div>
+
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CTR:</p>
+                <p>15 міс.</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Нових підписників:</p>
+                <p>Таргетована реклама</p>
+              </div>
+            </div>
+
+            <div class="caseCard__tags">
+              <a href="#">MetaAds</a>
+              <a href="#">Promo</a>
+              <a href="#">GoogleAds</a>
+              <a href="#">App</a>
+            </div>
+          </div>
+
+          <div class="caseCard__img">
+            <img src="images/case.jpg" alt="case">
+          </div>
+
+          <a href="#case" class="caseCard__link" target="_blank">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M0.456337 14.0411L14.312 3.28185M1.88574 1.07959L14.7877 2.92519L12.9421 15.8272"
+                        stroke="#F9F9F9" stroke-width="1.5"/>
+                </svg>
+              </span>
+
+          </a>
+        </div>
+        <div class="caseCard">
+          <div class="caseCard__info">
+            <div class="caseCard__title">
+              <a href="#">Hroom</a>
+            </div>
+
+            <div class="caseCard__desc">
+              <p>Hroom - бренд з виробництва снеків. Ми отримали задачу
+                створити інтерактивний лендінг для підвищення залученості
+                користувачів та впізнаваності бренду</p>
+            </div>
+
+            <div class="caseCard__params">
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CPV:</p>
+                <p>$102.4</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Гео:</p>
+                <p>Польща</p>
+              </div>
+
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CTR:</p>
+                <p>15 міс.</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Нових підписників:</p>
+                <p>Таргетована реклама</p>
+              </div>
+            </div>
+
+            <div class="caseCard__tags">
+              <a href="#">MetaAds</a>
+              <a href="#">Promo</a>
+              <a href="#">GoogleAds</a>
+              <a href="#">App</a>
+            </div>
+          </div>
+
+          <div class="caseCard__img">
+            <img src="images/case.jpg" alt="case">
+          </div>
+
+          <a href="#case" class="caseCard__link" target="_blank">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M0.456337 14.0411L14.312 3.28185M1.88574 1.07959L14.7877 2.92519L12.9421 15.8272"
+                        stroke="#F9F9F9" stroke-width="1.5"/>
+                </svg>
+              </span>
+
+          </a>
+        </div>
+        <div class="caseCard">
+          <div class="caseCard__info">
+            <div class="caseCard__title">
+              <a href="#">Hroom</a>
+            </div>
+
+            <div class="caseCard__desc">
+              <p>Hroom - бренд з виробництва снеків. Ми отримали задачу
+                створити інтерактивний лендінг для підвищення залученості
+                користувачів та впізнаваності бренду</p>
+            </div>
+
+            <div class="caseCard__params">
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CPV:</p>
+                <p>$102.4</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Гео:</p>
+                <p>Польща</p>
+              </div>
+
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CTR:</p>
+                <p>15 міс.</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Нових підписників:</p>
+                <p>Таргетована реклама</p>
+              </div>
+            </div>
+
+            <div class="caseCard__tags">
+              <a href="#">MetaAds</a>
+              <a href="#">Promo</a>
+              <a href="#">GoogleAds</a>
+              <a href="#">App</a>
+            </div>
+          </div>
+
+          <div class="caseCard__img">
+            <img src="images/case.jpg" alt="case">
+          </div>
+
+          <a href="#case" class="caseCard__link" target="_blank">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M0.456337 14.0411L14.312 3.28185M1.88574 1.07959L14.7877 2.92519L12.9421 15.8272"
+                        stroke="#F9F9F9" stroke-width="1.5"/>
+                </svg>
+              </span>
+
+          </a>
+        </div>
+        <div class="caseCard">
+          <div class="caseCard__info">
+            <div class="caseCard__title">
+              <a href="#">Hroom</a>
+            </div>
+
+            <div class="caseCard__desc">
+              <p>Hroom - бренд з виробництва снеків. Ми отримали задачу
+                створити інтерактивний лендінг для підвищення залученості
+                користувачів та впізнаваності бренду</p>
+            </div>
+
+            <div class="caseCard__params">
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CPV:</p>
+                <p>$102.4</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Гео:</p>
+                <p>Польща</p>
+              </div>
+
+              <div class="caseCard__param caseCard__param_sm">
+                <p>CTR:</p>
+                <p>15 міс.</p>
+              </div>
+
+              <div class="caseCard__param">
+                <p>Нових підписників:</p>
+                <p>Таргетована реклама</p>
+              </div>
+            </div>
+
+            <div class="caseCard__tags">
+              <a href="#">MetaAds</a>
+              <a href="#">Promo</a>
+              <a href="#">GoogleAds</a>
+              <a href="#">App</a>
+            </div>
+          </div>
+
+          <div class="caseCard__img">
+            <img src="images/case.jpg" alt="case">
+          </div>
+
+          <a href="#case" class="caseCard__link" target="_blank">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M0.456337 14.0411L14.312 3.28185M1.88574 1.07959L14.7877 2.92519L12.9421 15.8272"
+                        stroke="#F9F9F9" stroke-width="1.5"/>
+                </svg>
+              </span>
+
+          </a>
+        </div>
+      </div>
+      //= parts/pager.html
+    </div>
+  </div>
+  <div class="cases-page-bottom">
+    <section class="clients">
+      <div class="page__container">
+        <div class="clients__title">
+          <h2>Наші клієнти</h2>
+        </div>
+      </div>
+
+      <div class="clients__slider js-clients-slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/pastelia.svg" alt="Pastelia">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/asus.svg" alt="Asus">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/varus.svg" alt="Varus">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/shark-taxi.svg" alt="Shark taxi">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/big-bob.svg" alt="Big bob">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/ahmad-tea.svg" alt="Ahmad tea">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/silpo.svg" alt="Silpo">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/bybit.svg" alt="Bybit">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/lux-optika.svg" alt="Lux optika">
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src="images/logo/sadochok.svg" alt="Sadochok">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clients__gradient clients__gradient_left"></div>
+        <div class="clients__gradient clients__gradient_right"></div>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="page__container">
+        <div class="reviews__inner">
+          <div class="reviews__title">
+            <h2>Відгуки клієнтів</h2>
+          </div>
+
+          <div class="page__slider reviews__slider js-reviews-slider">
+            <div class="reviews__slider-inner">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="review review_blue">
+                      <div class="review__date">
+                        <p>2025-01-02</p>
+                      </div>
+
+                      <div class="review__text">
+                        <p>Вирішуємо маркетингові задачі клієнтів за допомогою
+                          digital-інструментів. Це підхід до розвитку бізнесу</p>
+                      </div>
+
+                      <div class="review__person">
+                        <div class="review__avatar">
+                          <img src="images/avatar-1.jpg" alt="avatar">
+                        </div>
+
+                        <div class="review__about">
+                          <div class="review__name">
+                            <p>James Wolters</p>
+                          </div>
+
+                          <div class="review__post">
+                            <p>iLab, Marketing manager</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#review-1" class="review__link" target="_blank">link</a>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="review">
+                      <div class="review__date">
+                        <p>2025-01-02</p>
+                      </div>
+
+                      <div class="review__text">
+                        <p>Вирішуємо маркетингові задачі клієнтів за допомогою
+                          digital-інструментів. Це підхід до розвитку бізнесу</p>
+                      </div>
+
+                      <div class="review__person">
+                        <div class="review__avatar">
+                          <img src="images/avatar-1.jpg" alt="avatar">
+                        </div>
+
+                        <div class="review__about">
+                          <div class="review__name">
+                            <p>James Wolters</p>
+                          </div>
+
+                          <div class="review__post">
+                            <p>iLab, Marketing manager</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#review-2" class="review__link" target="_blank">link</a>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide big">
+                    <div class="review">
+                      <div class="review__date">
+                        <p>2025-01-02</p>
+                      </div>
+
+                      <div class="review__text">
+                        <p>Вирішуємо маркетингові задачі клієнтів за допомогою
+                          digital-інструментів. Це підхід до розвитку бізнесу.Вирішуємо
+                          маркетингові задачі клієнтів за допомогою digital-інструментів.
+                          Це підхід до розвитку бізнесу</p>
+                      </div>
+
+                      <div class="review__person">
+                        <div class="review__avatar">
+                          <img src="images/avatar-2.jpg" alt="avatar">
+                        </div>
+
+                        <div class="review__about">
+                          <div class="review__name">
+                            <p>James Wolters</p>
+                          </div>
+
+                          <div class="review__post">
+                            <p>iLab, Marketing manager</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#review-3" class="review__link" target="_blank">link</a>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="review review_video">
+                      <div class="review__img">
+                        <img src="images/review.jpg" alt="review">
+                      </div>
+
+                      <div class="review__person">
+                        <div class="review__about">
+                          <div class="review__name">
+                            <p>Lisa Stinger</p>
+                          </div>
+
+                          <div class="review__post">
+                            <p>DigiSack, CEO</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#review-4" class="review__link" target="_blank">
+                        <svg>
+                          <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-play"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="review review_image">
+                      <div class="review__img">
+                        <img src="images/review.jpg" alt="review">
+                      </div>
+
+                      <a href="#review-5" class="review__link" target="_blank">link</a>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide big">
+                    <div class="review review_blue">
+                      <div class="review__date">
+                        <p>2025-01-02</p>
+                      </div>
+
+                      <div class="review__text">
+                        <p>Вирішуємо маркетингові задачі клієнтів за допомогою
+                          digital-інструментів. Це підхід до розвитку бізнесу.Вирішуємо
+                          маркетингові задачі клієнтів за допомогою digital-інструментів.
+                          Це підхід до розвитку бізнесу</p>
+                      </div>
+
+                      <div class="review__person">
+                        <div class="review__avatar">
+                          <img src="images/avatar-1.jpg" alt="avatar">
+                        </div>
+
+                        <div class="review__about">
+                          <div class="review__name">
+                            <p>James Wolters</p>
+                          </div>
+
+                          <div class="review__post">
+                            <p>iLab, Marketing manager</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#review-6" class="review__link" target="_blank">link</a>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="review">
+                      <div class="review__date">
+                        <p>2025-01-02</p>
+                      </div>
+
+                      <div class="review__text">
+                        <p>Вирішуємо маркетингові задачі клієнтів за допомогою
+                          digital-інструментів. Це підхід до розвитку бізнесу</p>
+                      </div>
+
+                      <div class="review__person">
+                        <div class="review__avatar">
+                          <img src="images/avatar-1.jpg" alt="avatar">
+                        </div>
+
+                        <div class="review__about">
+                          <div class="review__name">
+                            <p>James Wolters</p>
+                          </div>
+
+                          <div class="review__post">
+                            <p>iLab, Marketing manager</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#review-7" class="review__link" target="_blank">link</a>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="review review_blue">
+                      <div class="review__date">
+                        <p>2025-01-02</p>
+                      </div>
+
+                      <div class="review__text">
+                        <p>Вирішуємо маркетингові задачі клієнтів за допомогою
+                          digital-інструментів. Це підхід до розвитку бізнесу</p>
+                      </div>
+
+                      <div class="review__person">
+                        <div class="review__avatar">
+                          <img src="images/avatar-1.jpg" alt="avatar">
+                        </div>
+
+                        <div class="review__about">
+                          <div class="review__name">
+                            <p>James Wolters</p>
+                          </div>
+
+                          <div class="review__post">
+                            <p>iLab, Marketing manager</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#review-8" class="review__link" target="_blank">link</a>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide big">
+                    <div class="review">
+                      <div class="review__date">
+                        <p>2025-01-02</p>
+                      </div>
+
+                      <div class="review__text">
+                        <p>Вирішуємо маркетингові задачі клієнтів за допомогою
+                          digital-інструментів. Це підхід до розвитку бізнесу.Вирішуємо
+                          маркетингові задачі клієнтів за допомогою digital-інструментів.
+                          Це підхід до розвитку бізнесу</p>
+                      </div>
+
+                      <div class="review__person">
+                        <div class="review__avatar">
+                          <img src="images/avatar-1.jpg" alt="avatar">
+                        </div>
+
+                        <div class="review__about">
+                          <div class="review__name">
+                            <p>James Wolters</p>
+                          </div>
+
+                          <div class="review__post">
+                            <p>iLab, Marketing manager</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a href="#review-9" class="review__link" target="_blank">link</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reviews__pagination">
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="reviews__action">
+            <a href="#blog" class="page__button reviews__button">
+              <span>Більше відгуків</span>
+              <svg>
+                <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-link_arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="discuss">
+    <div class="page__container">
+      <div class="discuss__inner">
+        <div class="discuss__title">
+          <h2>Хочете обговорити свій майбутній проєкт?</h2>
+        </div>
+
+        <div class="discuss__desc">
+          <p>Залиште свої дані та наш менеджер зв'яжиться з Вами найближчим часом</p>
+        </div>
+
+        <div class="discuss__action">
+          <a href="#" class="page__button page__button_blue discuss__button">
+            <span>Обговорити проєкт</span>
+            <svg>
+              <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-link_arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer" style="margin: 0;">
+  <div class="page__container">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <div class="footer__logo">
+          <a href="/" class="footer__logo-link">
+            <svg>
+              <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-logo"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer__social">
+          <a href="https://www.facebook.com/ghack.agency" class="footer__social-link" target="_blank">
+            <svg>
+              <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-facebook"></use>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/growthy_digital" class="footer__social-link"
+             target="_blank">
+            <svg>
+              <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-instagram"></use>
+            </svg>
+          </a>
+
+          <a href="https://t.me/ghack1" class="footer__social-link" target="_blank">
+            <svg>
+              <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-telegram"></use>
+            </svg>
+          </a>
+
+          <a href="https://maps.app.goo.gl/wmf3c3pePpdX1RTU7" class="footer__map-link"
+             target="_blank">
+            <svg>
+              <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-map"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer__email">
+          <a href="mailto:office@ghack.agency" class="footer__email-link">office@ghack.agency</a>
+        </div>
+
+        <div class="footer__copy">
+          <p>2024 © Усі права захищені</p>
+        </div>
+      </div>
+
+      <nav class="footer__nav">
+        <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a href="#services" class="footer__menu-link js-scrollTo">
+              <span>Послуги</span>
+              <svg>
+                <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-arrow"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__menu-item">
+            <a href="#about" class="footer__menu-link">Про нас</a>
+          </li>
+
+          <li class="footer__menu-item">
+            <a href="#cause" class="footer__menu-link">Кейси</a>
+          </li>
+
+          <li class="footer__menu-item">
+            <a href="#reviews" class="footer__menu-link">Клієнти та відгуки</a>
+          </li>
+
+          <li class="footer__menu-item">
+            <a href="#career" class="footer__menu-link">Кар'єра</a>
+          </li>
+
+          <li class="footer__menu-item">
+            <a href="#blog" class="footer__menu-link">Блог</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer__right">
+        <div class="footer__email">
+          <a href="mailto:office@ghack.agency" class="footer__email-link">office@ghack.agency</a>
+        </div>
+
+        <div class="footer__map">
+          <a href="https://maps.app.goo.gl/wmf3c3pePpdX1RTU7" class="footer__map-link"
+             target="_blank">
+            <svg>
+              <use href="./images/assets/spritemap.5e2bffb2.svg#sprite-map"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer__phone">
+          <a href="tel:+38 (066) 072 54 74" class="footer__phone-link">+38 (066) 072 54 74</a>
+        </div>
+
+        <div class="footer__addres">
+          <p>Київ, Воздвиженьска, 41</p>
+        </div>
+
+        <div class="footer__time">
+          <p>09:00 - 18:00 (Пн-Пт)</p>
+        </div>
+
+        <div class="footer__copy">
+          <p>2024 © Усі права захищені</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+  <div class="offcanvas-body sidebar__body">
+    <div class="sidebar__top">
+      <div class="sidebar__logo">
+        <a href="/" class="sidebar__logo-link">
+          <svg>
+            <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-logo">
+            </use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="sidebar__close">
+        <button type="button" class="btn-close sidebar__close-button" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav js-sidebar-nav">
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item sidebar__menu-item_submenu">
+          <div class="sidebar__menu-link">
+            <span>Послуги</span>
+            <svg>
+              <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-thin">
+              </use>
+            </svg>
+          </div>
+
+          <div class="sidebar__subnav">
+            <ul class="sidebar__submenu">
+              <li class="sidebar__submenu-item">
+                <a href="/tarhetovana-reklama/" class="sidebar__submenu-link">
+                  <span>Таргетингова реклама</span>
+                  <svg>
+                    <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-right">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="sidebar__submenu-item">
+                <a href="/kontekstna-reklama-v-poshuku-google/" class="sidebar__submenu-link">
+                  <span>Контекстна та медійна реклама</span>
+                  <svg>
+                    <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-right">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="sidebar__submenu-item no_active">
+                <a href="#" class="sidebar__submenu-link">
+                  <span>SEO-просування сайтів</span>
+                  <svg>
+                    <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-right">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="sidebar__submenu-item no_active">
+                <a href="#" class="sidebar__submenu-link">
+                  <span>SMM просування</span>
+                  <svg>
+                    <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-right">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="sidebar__submenu-item no_active">
+                <a href="#" class="sidebar__submenu-link">
+                  <span>Аудит</span>
+                  <svg>
+                    <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-right">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="sidebar__submenu-item ">
+                <a href="/rozrobka-marketynh-stratehii/" class="sidebar__submenu-link">
+                  <span>Розробка стратегій маркетингу та бренду</span>
+                  <svg>
+                    <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-right">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="sidebar__submenu-item no_active">
+                <a href="#" class="sidebar__submenu-link">
+                  <span>Просування мобільних застосунків</span>
+                  <svg>
+                    <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-right">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="sidebar__submenu-item no_active">
+                <a href="#" class="sidebar__submenu-link">
+                  <span>Розробка</span>
+                  <svg>
+                    <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-right">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="sidebar__submenu-item no_active">
+                <a href="#" class="sidebar__submenu-link">
+                  <span>Digital аналітика</span>
+                  <svg>
+                    <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-right">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="sidebar__menu-item no_active">
+          <a href="#about" class="sidebar__menu-link">
+            <span>Про нас</span>
+            <svg>
+              <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-thin">
+              </use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="sidebar__menu-item no_active">
+          <a href="#cause" class="sidebar__menu-link">
+            <span>Кейси</span>
+            <svg>
+              <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-thin">
+              </use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="sidebar__menu-item no_active">
+          <a href="#reviews" class="sidebar__menu-link">
+            <span>Клієнти та відгуки</span>
+            <svg>
+              <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-thin">
+              </use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="sidebar__menu-item no_active">
+          <a href="#career" class="sidebar__menu-link">
+            <span>Кар'єра</span>
+            <svg>
+              <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-thin">
+              </use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="sidebar__menu-item no_active">
+          <a href="#blog" class="sidebar__menu-link">
+            <span>Блог</span>
+            <svg>
+              <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-arrow-thin">
+              </use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar__bot">
+      <div class="sidebar__phone">
+        <a href="tel:+38 (066) 072 54 74" class="sidebar__phone-link">
+          <div class="sidebar__phone-icon">
+            <svg>
+              <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-phone">
+              </use>
+            </svg>
+          </div>
+
+          <span>+38 (066) 072 54 74</span>
+        </a>
+      </div>
+
+      <div class="sidebar__email">
+        <a href="mailto:office@growthy-digital.com" class="sidebar__email-link">
+          <div class="sidebar__email-icon">
+            <svg>
+              <use href="https://growthy-digital.com/wp-content/themes/growthy/assets/spritemap.5e2bffb2.svg#sprite-email">
+              </use>
+            </svg>
+          </div>
+
+          <span>office@growthy-digital.com</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="popup" data-lenis-prevent class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body">
+        <button data-close="" type="button" class="popup__close" aria-label="close modal">
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="24.5" fill="#EBEAEA" stroke="#464646"></circle>
+            <path d="M16.5 16L34.5 34" stroke="#090909" stroke-linecap="round"></path>
+            <path d="M34 16.5L16 34.5" stroke="#090909" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="popup__head">
+          <p class="popup__title">Обговорити проєкт</p>
+          <p class="popup__txt">Отримайте детальну та зрозумілу комерційну пропозицію</p>
+        </div>
+
+        <div class="wpcf7 no-js" id="wpcf7-f2274-o1" lang="uk" dir="ltr" data-wpcf7-id="2274">
+          <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <form action="/tarhetovana-reklama/#wpcf7-f2274-o1" method="post" class="wpcf7-form init"
+                aria-label="Contact form" novalidate="novalidate" data-status="init">
+            <div style="display: none;">
+              <input type="hidden" name="_wpcf7" value="2274">
+              <input type="hidden" name="_wpcf7_version" value="6.0.5">
+              <input type="hidden" name="_wpcf7_locale" value="uk">
+              <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2274-o1">
+              <input type="hidden" name="_wpcf7_container_post" value="0">
+              <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+            </div>
+            <div class="form__checkbox">
+              <div class="checkbox">
+                <input id="check-01" class="checkbox__input" type="checkbox" name="PPC[]" value="PPC">
+                <label for="check-01" class="checkbox__label">PPC</label>
+              </div>
+              <div class="checkbox">
+                <input id="check-02" class="checkbox__input" type="checkbox" name="target[]" value="Таргет">
+                <label for="check-02" class="checkbox__label">Таргет</label>
+              </div>
+              <div class="checkbox">
+                <input id="check-03" class="checkbox__input" type="checkbox" name="smm[]" value="SMM">
+                <label for="check-03" class="checkbox__label">SMM</label>
+              </div>
+              <div class="checkbox">
+                <input id="check-04" class="checkbox__input" type="checkbox" name="influence[]" value="Influence">
+                <label for="check-04" class="checkbox__label">Influence</label>
+              </div>
+              <div class="checkbox">
+                <input id="check-05" class="checkbox__input" type="checkbox" name="tik-tok[]" value="Tik-Tok">
+                <label for="check-05" class="checkbox__label">Tik-Tok</label>
+              </div>
+              <div class="checkbox">
+                <input id="check-06" class="checkbox__input" type="checkbox" name="digital-marketing[]"
+                       value="Digital marketing">
+                <label for="check-06" class="checkbox__label">Digital marketing</label>
+              </div>
+              <div class="checkbox">
+                <input id="check-07" class="checkbox__input" type="checkbox" name="web-development[]"
+                       value="Web development">
+                <label for="check-07" class="checkbox__label">Web development</label>
+              </div>
+              <div class="checkbox">
+                <input id="check-08" class="checkbox__input" type="checkbox" name="other[]" value="Інше">
+                <label for="check-08" class="checkbox__label">Інше</label>
+              </div>
+            </div>
+
+            <div class="form__items">
+              <div class="form__item">
+                <input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input"
+                       aria-required="true" aria-invalid="false" placeholder="Ваше ім'я*" value="" type="text"
+                       name="text-733">
+              </div>
+              <div class="form__item">
+
+                <input size="40" maxlength="400"
+                       class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel input"
+                       id="phone" aria-required="true" aria-invalid="false" placeholder="Hомер телефону*" value=""
+                       type="tel" name="tel-496">
+              </div>
+              <div class="form__item">
+                <input size="40" maxlength="400"
+                       class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email input"
+                       aria-invalid="false" placeholder="Ваш E-mail" value="" type="email" name="email-62">
+              </div>
+              <div class="form__item">
+                <input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text input" aria-invalid="false"
+                       placeholder="Компанія" value="" type="text" name="text-76">
+              </div>
+              <div class="form__item item-textarea">
+                <textarea cols="10" rows="4" maxlength="2000" class="wpcf7-form-control wpcf7-textarea input"
+                          aria-invalid="false" placeholder="Кілька слів про проєкт" name="message"></textarea>
+              </div>
+              <div class="form__item item-acceptance">
+                <span class="wpcf7-form-control wpcf7-acceptance optional"><span class="wpcf7-list-item"><label><input
+                        type="checkbox" name="acceptance-599" value="1" class="acceptance__input"
+                        aria-invalid="false"><span class="wpcf7-list-item-label">Надсилаючи повідомлення, я приймаю користувальницьку угоду та підтверджую, що ознайомлений та згоден з політикою конфіденційності даного сайту</span></label></span></span>
+              </div>
+            </div>
+
+            <button class="wpcf7-form-control wpcf7-submit has-spinner page__button page__button_blue form__button"
+                    type="submit" value="Відправити"><span>Відправити</span>
+            </button>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
+<script src="js/libs/main-BEODntqA.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/libs/popup.js"></script>
+<script src="js/libs/inputmask.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
